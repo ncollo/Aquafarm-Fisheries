@@ -1,0 +1,82 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+/* ── Global Dark Mode Overrides ─────────────────────────────────────────────── */
+/* Applied site-wide when .dark class is on <html> */
+
+.dark section,
+.dark div[class*="bg-white"],
+.dark article[class*="bg-white"] {
+  color: inherit;
+}
+
+/* Light backgrounds → dark equivalents */
+.dark .bg-white { background-color: #1e293b !important; }
+.dark .bg-gray-50 { background-color: #0f172a !important; }
+.dark .bg-gray-100 { background-color: #1e293b !important; }
+
+/* Text colors */
+.dark .text-gray-900 { color: #f1f5f9 !important; }
+.dark .text-gray-800 { color: #e2e8f0 !important; }
+.dark .text-gray-700 { color: #cbd5e1 !important; }
+.dark .text-gray-600 { color: #94a3b8 !important; }
+.dark .text-gray-500 { color: #64748b !important; }
+.dark .text-gray-400 { color: #475569 !important; }
+
+/* Borders */
+.dark .border-gray-100 { border-color: #334155 !important; }
+.dark .border-gray-200 { border-color: #334155 !important; }
+.dark .divide-gray-100 > * + * { border-color: #334155 !important; }
+.dark .divide-gray-50 > * + * { border-color: #1e293b !important; }
+
+/* Hover states on light elements */
+.dark .hover\:bg-gray-50:hover { background-color: #1e293b !important; }
+.dark .hover\:bg-gray-100:hover { background-color: #334155 !important; }
+
+/* Cards & shadows */
+.dark .shadow-sm { box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.4) !important; }
+.dark .shadow-md { box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.5) !important; }
+.dark .shadow-lg { box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.6) !important; }
+
+/* Inputs */
+.dark input:not([class*="bg-teal"]):not([class*="bg-amber"]) {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+  color: #f1f5f9 !important;
+}
+.dark input::placeholder { color: #64748b !important; }
+.dark textarea:not([class*="bg-teal"]) {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+  color: #f1f5f9 !important;
+}
+
+/* Teal sections stay dark-friendly already */
+.dark .bg-teal-50 { background-color: #0f2d2d !important; }
+.dark .text-teal-700 { color: #2dd4bf !important; }
+.dark .text-teal-600 { color: #14b8a6 !important; }
+.dark .border-teal-200 { border-color: #134e4a !important; }
+
+/* Blue/green/amber sections */
+.dark .bg-blue-50 { background-color: #0f1e2d !important; }
+.dark .bg-green-50 { background-color: #0f1f17 !important; }
+.dark .bg-amber-50 { background-color: #1f1507 !important; }
+.dark .bg-purple-50 { background-color: #1a0f2e !important; }
+.dark .bg-rose-50 { background-color: #2d0f16 !important; }
+
+/* Table rows */
+.dark .hover\:bg-gray-50:hover { background-color: #1e293b !important; }
+
+/* Gradient sections that use from-blue-50 or to-teal-50 */
+.dark .from-blue-50 { --tw-gradient-from: #0f172a !important; }
+.dark .to-teal-50 { --tw-gradient-to: #0f1f1f !important; }
+.dark .from-gray-50 { --tw-gradient-from: #0f172a !important; }
+
+/* Smooth transitions */
+* { transition-property: background-color, border-color, color; transition-duration: 200ms; }
+
+/* Except for transforms and opacity which should not be slowed down */
+.transition-transform { transition-property: transform !important; }
+.transition-opacity { transition-property: opacity !important; }
+.transition-all { transition-property: all !important; }
