@@ -12,9 +12,8 @@ export function RootLayout() {
 
   return (
     <div
-      className={`min-h-screen flex flex-col transition-colors duration-300 ${
-        isDark ? "bg-gray-950" : "bg-white"
-      }`}
+      className={`min-h-screen flex flex-col transition-colors duration-300 ${isDark ? "bg-gray-950" : "bg-white"
+        }`}
       style={{ fontFamily: "Inter, sans-serif" }}
     >
       <ScrollToTop />
